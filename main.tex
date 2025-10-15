@@ -1,0 +1,85 @@
+\documentclass{setupFiles/final_exam_sust}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% About prining the solution
+\printanswers
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Define all exam variables (Adapt this part for you)
+
+\newcommand{\institutionName}{Shahjalal University of Science and Technology}
+\newcommand{\institutionNameShort}{SUST}
+\newcommand{\deptName}{Department of Physics}
+\newcommand{\deptNameShort}{PHY}
+
+
+\newcommand{\examName}{1\textsuperscript{st} Year 1\textsuperscript{st} Semester Final Examination,~2022}
+\newcommand{\courseCode}{PHY~07131121}
+\newcommand{\courseTitle}{Quantum Electronics}
+\newcommand{\SessionExaminee}{2020-2021}
+\newcommand{\totalMarks}{60}
+\newcommand{\totalCredits}{3.0}
+\newcommand{\examDuration}{3~Hours}
+\newcommand{\examDate}{October~09,~2025~--~14:30} % Exam date or the questing writing date
+\newcommand{\specialInstruction}{Answer \textbf{all} the questions.}
+
+
+
+\newcommand{\teacherName}{Md Rasedujjaman}
+\newcommand{\teacherUniqueID}{N07R28S33}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Header of the question %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{setupFiles/examHeader}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{questions}
+	
+
+\input{questionFiles/Q1}  	 
+\input{questionFiles/Q2}  	
+\input{questionFiles/Q3}
+%%%%%%%%%%%%%%%%%%%%%  	
+%% The OR question
+\begin{center}
+\vspace{5mm}
+\textbf{OR}
+\vspace{5mm}
+\end{center}	
+\input{questionFiles/Q3OR}	
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{questionFiles/Q4}  	
+\input{questionFiles/Q5}  	
+\input{questionFiles/Q6}  	
+
+%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+\vspace{5mm}
+\textbf{OR}
+\vspace{5mm}
+\end{center}	
+\input{questionFiles/Q6OR}	
+%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{questions}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% If you want to provide some formuls
+\vfill
+\input{questionFiles/givenFormula}
+
+
+
+
+\ifprintanswers
+	%Stuff to appear only when answers \textbf{are} being printed.
+\else
+	%Stuff to appear only when answers \textbf{are not} being printed.
+\fi
+
+
+\end{document}

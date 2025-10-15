@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%PART-A(Question#03--
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\question 
+\begin{parts}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+\part[4]\color{red} If you want to place two figures side by side then use minipage environment. As for example: \color{black}For the circuit shown in Fig.~\ref{fig:ckt-thevenin-dc}, calculate the current in the $10~\unit{\ohm}$ resistance. Use Thevenin's theorem only.
+		
+			
+
+\begin{figure}[H]
+\centering
+% First figure
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.7]
+
+% Circuit elements
+\draw (3, 4) to[american resistor, l={$8~\Omega$}] (6, 4);
+\draw (3, 4) to[american resistor, l={$2~\Omega$}] (3, 0);
+\draw (9, 4) to[american resistor, l_={$10~\Omega$}] (9, 0);
+\draw (1, 4) to[american resistor, l_={$5~\Omega$}] (1, 2);
+\draw (1, 2) to[battery1, l_={$20~V$}] (1, 0);
+\draw (6, 4) to[battery, l_={$12~V$}] (9, 4);
+\draw (1, 0) -- (9, 0);
+\draw (1, 4) -- (3, 4);
+\draw node[ocirc] (N1) at (9, 4) {} node[anchor=south] at (N1.north){$A$};
+\draw node[ocirc] at (9, 0) {};
+\draw node[ocirc] (N2) at (9, 0) {} node[anchor=north] at (N2.south){$B$};
+
+\end{tikzpicture}
+\caption{Circuit for Thevenin's Theorem}
+\label{fig:ckt-thevenin-dc}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Second figure
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.7]
+
+\draw (4, 5) to[american resistor, l_={$3~\Omega$}] (4, 3);
+\draw (4, 3) to[american resistor, l_={$5~\Omega$}] (4, 1);
+\draw (4, 3) to[american resistor, l={$1~\Omega$}] (6, 3);
+\draw (9, 3) to[american resistor, l={$4~\Omega$}] (9, 1);
+\draw (4, 5) to[american resistor, l={$2~\Omega$}] (9, 5);
+\draw (2, 1) to[american current source, l={$4~A$}] (2, 5);
+\draw (6, 3) to[american controlled voltage source, l={$5i_o$}] (9, 3);
+\draw (4, 1) to[american voltage source, l_={$20~V$}] (9, 1);
+\draw (2, 5) -- (4, 5);
+\draw (2, 1) -- (4, 1);
+\draw (9, 5) -| (9, 3);
+
+% Current label i_o
+\node at (4.7, 2) {$i_o$};
+\draw[->] (4.5, 2.5) -- (4.5, 1.5);
+
+\end{tikzpicture}
+\caption{Circuit for Superposition Theorem}
+\label{fig:ckt-superposition-dc}
+\end{minipage}
+\end{figure}
+
+\begin{solution}
+
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\part[4]What is super position theorem? Find $i_o$ in the circuit in Fig.~\ref{fig:ckt-superposition-dc} using the superposition theorem. 
+		
+\begin{solution}
+
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[2] \color{red}If a table is needed to insert, then you can use either tabular or tabulrx. In the table as shown in Table~\ref{table:someItems}, the data are given for a general purpose Silicon diode, draw the I-V characteristic curve. 
+
+\color{black}
+\begin{table}[H]
+\centering
+\caption{Your Table Title Here}
+\label{table:someItems}
+\begin{tabularx}{0.8\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\raggedleft\arraybackslash}X | }
+ \hline
+ SL.no & Forward bias voltage (V) & Forward bias current(mA) \\
+ \hline
+  1 & 0 & 0 \\
+ \hline
+  2 & 0.2 & 0.0 \\
+ \hline
+  3 & 0.4 & 0.1 \\
+ \hline
+  4 & 0.5 & 0.5 \\
+ \hline
+  5 & 0.53 & 1.0 \\
+ \hline
+  6 & 0.6 & 8.2 \\
+ \hline
+  7 & 0.66 & 19.5 \\
+ \hline
+  8 & 0.7 & 53.5 \\
+ \hline
+  9 & 0.71 & 83.1 \\
+ \hline
+  10 & 0.73 & 112.7 \\
+ \hline
+ 
+\end{tabularx}
+\end{table}
+
+\begin{solution}
+
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{parts}
+
+

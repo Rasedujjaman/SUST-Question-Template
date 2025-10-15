@@ -1,0 +1,98 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%PART-A(Question#01- Frequency Response of Amplifier //%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\question 
+\begin{parts}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\part[2] \color{red}If you want to put two or more figures side by side then you can use the latex minipage environment.\color{black} What is super Node? What is the difference between Super Mesh \& Mesh?
+
+\begin{solution}
+
+\end{solution}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\part[4]Using nodal analysis, determine the potential across the $4~\unit{\Omega}$ resistor in Fig.~\ref{fig:ckt-nodal-analysis} 
+
+\begin{figure}[H]
+\centering
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% First figure
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\scalebox{0.7}{
+\begin{tikzpicture}
+% Paths, nodes and wires:
+	\draw (4, 4) to[american resistor, l_={$2~\Omega$}, label distance=0.02cm] (7, 4);
+	\draw (7, 4) to[american resistor, l_={$2~\Omega$}, label distance=0.02cm] (10, 4);
+	\draw (10, 4) to[american resistor, l={$4~\Omega$}, label distance=0.02cm] (10, 1);
+	\draw (4, 4) to[american resistor, l={$2~\Omega$}, label distance=0.02cm] (4, 1);
+	
+	
+	
+	\draw (4, 4) to[american resistor, l={$5~\Omega$}, label distance=0.02cm] (7, 6);
+	\draw (7, 6) to[american resistor, l={$5~\Omega$}, label distance=0.02cm] (10, 4);
+	\draw (7, 1) to[american current source, l_={$3~A$}, label distance=0.02cm] (7, 4);
+	\draw (4, 1) -- (10, 1);
+	\draw node[ground] at (7, 1) {};
+	\draw node[ground] at (7, 1) {};
+	\draw node[ground] at (7, 1) {};
+	\draw node[ground] at (7, 1) {};
+\end{tikzpicture}
+}
+\caption{}
+\label{fig:ckt-nodal-analysis}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\hfill
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Second figure
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\scalebox{0.7}{
+\begin{tikzpicture}
+
+% Paths, nodes, and wires:
+	\draw (5, 7) to[american resistor, l={$2~\Omega$}, label distance=0.02cm] (5, 4);
+	\draw (5, 4) to[american resistor, l={$4~\Omega$}, label distance=0.02cm] (5, 1);
+	\draw (8, 7) to[american resistor, l={$8~\Omega$}, label distance=0.02cm] (8, 4);
+	\draw (8, 4) to[american controlled voltage source, l={$2~v_o$}, label distance=0.02cm] (8, 1);
+	\draw (5, 4) to[american current source, l={$3~A$}, label distance=0.02cm] (8, 4);
+	\draw (3, 7) to[american voltage source, l_={$12~V$}, label distance=0.02cm] (3, 1);
+	\draw (3, 1) -- (8, 1);
+	\draw (3, 7) -- (8, 7);
+
+
+    \node at (4.5, 5.5) [align=center] {\textbf{+} \\[0.25cm] $v_o$ \\[0.25cm] \textbf{-}}; % Increased spacing above and below V_2
+
+
+	% Loop current labels:
+	\node at (4.0, 4.1) {$i_1$}; % Left loop
+	\node at (6.7, 5.6) {$i_2$}; % Middle loop
+	\node at (6.7, 2.6) {$i_3$}; % Right loop
+
+	% Loop current direction arrows:
+	\draw[->] (3.8, 4.5) arc[start angle=120, end angle=-150, radius=0.5]; % i1 loop arrow
+	\draw[->] (6.5, 6) arc[start angle=120, end angle=-150, radius=0.5]; % i2 loop arrow
+	\draw[->] (6.5, 3) arc[start angle=120, end angle=-150, radius=0.5]; % i3 loop arrow
+\end{tikzpicture}
+}
+
+
+
+\caption{}
+\label{fig:ckt-mesh-analysis}
+\end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{figure}
+
+\begin{solution}
+
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\part[4]Use mess analysis to find currents and voltage $v_o$ in the circuit of Fig.~\ref{fig:ckt-mesh-analysis}
+	
+\begin{solution}
+
+\end{solution}	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{parts}
