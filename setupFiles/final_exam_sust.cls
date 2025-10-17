@@ -61,7 +61,15 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\footer{\textit{\tiny {\deptNameShort{},~\institutionNameShort{}}}}{\textit{\tiny \examDate{}}}{\textit{\tiny Page \thepage}}
+%\footer{\textit{\tiny {\deptNameShort{},~\institutionNameShort{}}}}{\textit{\tiny \examDate{}}}{\textit{\tiny Page \thepage}}
+
+\footer
+  {\textit{\tiny {\deptNameShort{},~\institutionNameShort{}}}} % Left
+  {\textit{\tiny \examDate{}}}                                 % Center
+  {\textit{\tiny Page \thepage\ of \pageref{LastPage}}}        % Right
+
+
+
 
 
 \usetikzlibrary{decorations.pathreplacing}
