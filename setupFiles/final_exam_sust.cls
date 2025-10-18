@@ -6,9 +6,7 @@
 \RequirePackage[top=0.5in, bottom=1.6cm, left=1in, right= 1in]{geometry}
 
 
-
-
-
+%\RequirePackage{pageslts}
 \RequirePackage{advdate}
 \RequirePackage{verbatim}
 \RequirePackage[latin1]{inputenc}
@@ -39,7 +37,7 @@
 	
 \RequirePackage[euler]{textgreek}
 \RequirePackage{pgfplots}
-
+\RequirePackage{xstring}
 
 
 \RequirePackage{tabularx}
@@ -61,13 +59,10 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\footer{\textit{\tiny {\deptNameShort{},~\institutionNameShort{}}}}{\textit{\tiny \examDate{}}}{\textit{\tiny Page \thepage}}
-
 \footer
   {\textit{\tiny {\deptNameShort{},~\institutionNameShort{}}}} % Left
   {\textit{\tiny \examDate{}}}                                 % Center
   {\textit{\tiny Page \thepage\ of \pageref{LastPage}}}        % Right
-
 
 
 
@@ -94,3 +89,13 @@
 \pointname{}
 \pointformat{\thepoints}
 
+% Command for breakdown parts without total point(bd = breakdown)
+\newcommand{\bdpart}[1][]{%
+  \IfSubStr{#1}{+}{%
+    \pointformat{#1}% No parentheses
+    \part[0]% Use 0 or placeholder
+    \pointformat{\thepoints}%
+  }{%
+    \part[#1]%
+  }%
+}
