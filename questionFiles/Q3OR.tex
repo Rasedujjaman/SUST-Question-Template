@@ -1,71 +1,37 @@
-%%%%%%%%%%%%%%%PART-A(Question#3OR
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%% The OR question
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%  Question#Q3OR  %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+  Put all the topics for this question.
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 \begin{parts}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\part [4]Find the Thevenin's equivalent circuit of Fig.~\ref{fig:ckt-thevenin-equivalent} to the left of the terminal.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-	% Paths, nodes, and wires:
-	\draw (3, 3) to[american resistor, l={$5~\Omega$}, label distance=0.02cm] (6, 3);
-	\draw (6, 3) to[american resistor, l={$3~\Omega$}, label distance=0.02cm] (9, 3);
-	\draw (9, 3) to[american resistor, l={$4~\Omega$}, label distance=0.02cm] (9, -0);
-	\draw (6, -0) to[american controlled current source, l_={$1.5I_x$}, label distance=0.02cm, mirror] (6, 3);
-	\draw (3, 3) to[american voltage source, l_={$6~V$}, label distance=0.02cm] (3, -0);
-	\draw (3, -0) -- (11, -0);
-	\draw (9, 3) -- (11, 3);
-	\draw node[ocirc] (N1) at (11, 3) {} node[anchor=west] at (N1.east){$a$};
-	\draw node[ocirc] (N2) at (11, -0) {} node[anchor=west] at (N2.east){$b$};
-
-	% Current label near the top left of 3Ω resistor:
-	\node at (6.2, 3.6) {$I_x$};  % Label for the current
-	\draw[->] (6.0, 3.3) -- (6.5, 3.3);  % Arrow indicating direction
-
-\end{tikzpicture}
-\caption{}
-\label{fig:ckt-thevenin-equivalent}
-\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
+\part[2] What is photovoltaic device? What is air mass zero (AM0)? What is its value?
 
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part [4] Find the magnitude $R_L$ for the maximum power transfer in the circuit shown in Fig.~\ref{fig:ckt-max-power}. Also find out the maximum power. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[3] Suppose a household consumes \SI{500}{\watt} of electric power daily over a year. If annual average solar intensity incident per day is about \SI{6}{\kilo\watt\hour\per\meter\squared} and a photovoltaic device that converts solar energy to electrical energy has efficiency of 15\%, what is required  device area?
 
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-	% Paths, nodes and wires:
-	\draw (7.008, 4) to[american resistor, l_={$3~\Omega$}, label distance=0.02cm] (10.008, 4);
-	\draw (1.008, 4) to[american resistor, l_={$5~\Omega$}, label distance=0.02cm] (1.008, 2.4);
-	\draw (1.008, 2.4) to[battery1, l_={$10~V$}, label distance=0.02cm] (1.008, 1);
-	\draw (4.008, 1) to[american current source, l={$6~A$}, label distance=0.02cm, mirror] (4.008, 4);
-	\draw (10.008, 1) to[variable american resistor, l_={$R_L$}, label distance=0.02cm, mirror] (10.008, 4);
-	\draw (1.008, 4) -- (7.008, 4);
-	\draw (7.008, 1) to[american resistor, l={$4~\Omega$}, label distance=0.02cm] (10.008, 1);
-	\draw (1.008, 1) -- (7.008, 1);
-	\draw (7.008, 4) to[american resistor, l={$2~\Omega$}, label distance=0.02cm] (7.008, 1);
-\end{tikzpicture}
+\begin{solution}
 
-\caption{}
-\label{fig:ckt-max-power}
-\end{figure}
+\end{solution}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bdpart[4+1] Draw $I-V$ characteristics for a photovoltaic device. Define fill factor FF.
 
 
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part[2] Write short notes on Real power and Reactive power. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[2] Draw schematic \(I-V\) characteristic of a \(Si\)-solar Cell.
 
 
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{parts}
-
 

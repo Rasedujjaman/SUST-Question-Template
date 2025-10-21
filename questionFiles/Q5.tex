@@ -1,112 +1,16 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%PART-B(Question#05-->
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\question 
-\begin{parts} 	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
-\part[4]For the circuit in Fig.~\ref{fig:ckt-inductor-acanalysis}, 
-	 $i(t) = 4(2-e^{-10t})~\unit{\milli\ampere}$. If $i_2(t) = -1~\unit{\milli\ampere}$, find:
-			
-\begin{inlinesubparts}
-\item  $i_1(t)$
-\item  $v(t),~v_1(t)$ and $v_2(t)$
-\item  $i_1(t)$ and $i_2(t)$.
-\end{inlinesubparts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%  Question#05  %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+  Put all the topics for this question.
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 		
-		
-\begin{figure}[H]
-\centering
-
-\begin{tikzpicture}
-	% Paths, nodes, and wires:
-	\draw (8.99, 3) to[cute inductor, l={$12~H$}, label distance=0.02cm] (8.99, 1);
-	\draw (7, 3) to[cute inductor, l_={$4~H$}, label distance=0.02cm] (7, 1);
-	\draw (5, 3) to[cute inductor, l={$2~H$}, label distance=0.02cm] (7, 3);
-	\draw (5, 3) -- (4, 3);
-	\draw (8.99, 1) -| (4, 1);
-	\draw (7, 3) -| (8.99, 3);
-	\draw node[ocirc] at (4, 3) {};
-	\draw node[ocirc] at (4, 1) {};
-
-	% Shorter current arrows with labels
-	\draw[->, very thin] (4.2, 3.15) --++ (0.4, 0) node[midway, above] {\scriptsize $i$};  % Current for 2H inductor
-	\draw[->, very thin] (7.3, 2.9) --++ (0, -0.4) node[anchor=south west] {\scriptsize $i_1$}; % Current for 4H inductor (shifted downward)
-	\draw[->, very thin] (9.3, 2.9) --++ (0, -0.4) node[anchor=south west] {\scriptsize $i_2$}; % Current for 12H inductor (shifted downward)
-
-	% Voltage label for the 12mH inductor with increased spacing
-	\node at (8, 1.9) [align=center] {\textbf{+} \\[0.2cm] $v_2$ \\[0.2cm] \textbf{-}};
-    % Voltage label for at the input terminal
-	\node at (4, 1.9) [align=center] {\textbf{+} \\[0.2cm] $v$ \\[0.2cm] \textbf{-}};
-
-    \node at (5.9, 2.6) { \textbf{+~~$v_1$~~-} };
-
-\end{tikzpicture}
-\caption{}
-\label{fig:ckt-inductor-acanalysis}
-\end{figure}
-
+\question [12] With Lorentz Oscillator Model, find an expression for dielectric displacement field, $D$. 
 
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\part[3]Find $i_x$ in the circuit of Fig.~\ref{fig:ckt-nodal-ac-analysis} using nodal analysis.
-		
-		
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}
-	% Paths, nodes, and wires:
-	\draw (3, 3) to[american resistor, l={$10~\Omega$}, label distance=0.02cm] (5, 3);
-	\draw (5, 3) to[cute inductor, l={$1~H$}, label distance=0.02cm] (7, 3);
-	\draw (8.99, 3) to[cute inductor, l={$0.5~H$}, label distance=0.02cm] (8.99, 1);
-	\draw (7, 1) to[american controlled current source, l_={$2i_x$}, label distance=0.02cm, mirror] (7, 3);
-	\draw (5, 3) to[capacitor, l={$0.1~F$}, label distance=0.02cm] (5, 1);
-	\draw (3, 3) to[american voltage source, l_={$20\cos 4t~V$}, label distance=0.02cm] (3, 1);
-	\draw node[ground] at (7, 1) {};
-	\draw (7, 3) -| (8.99, 3);
-	\draw (3, 1) -| (8.99, 1);
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
 
-	% Shifted current arrow and label (left and down)
-	\draw[<-, very thin] (4.85, 2.3) --++ (0, 0.4) node[midway, left] {\scriptsize $i_x$};
-
-\end{tikzpicture}
-
-
-
-\caption{}
-\label{fig:ckt-nodal-ac-analysis}
-\end{figure}
-
-\begin{solution}
-
-\end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\part[3]Determine the currents $I_1$, $I_2$ and $I_{D2}$ for the network of Fig.~\ref{fig:ckt-diode-dcanalysis}.
-		
-\begin{figure}[H]
-\centering
-
-\begin{tikzpicture}
-	% Paths, nodes, and wires:
-	\draw (5, 6) to[empty diode, l_={$D1$}, label distance=0.02cm] 
-	    node[above left=0.3cm] {\small Si} (8, 6); % Shifted "Si" label to the left of D1
-	    
-	\draw (8, 6) to[empty diode, l={$D2$}, i>={$i_{D2}$}, label distance=0.02cm] 
-	    node[above left=0.3cm] {\small Si} (8, 4); % Shifted "Si" label to the left of D2
-	
-	\draw (8, 6) to[american resistor, l={$R_1$}, i>={$i_1$}, label distance=0.02cm] (11, 6);
-	\draw (8, 4) to[american resistor, l_={$R_2$}, i>={$i_2$}, label distance=0.02cm] (5, 4);
-	\draw (5, 6) to[battery1, l_={$E=20~V$}, label distance=0.02cm] (5, 4);
-	\draw (8, 4) -| (11, 6);
-\end{tikzpicture}
-\caption{}
-\label{fig:ckt-diode-dcanalysis}
-\end{figure}
-
-
-\begin{solution}
-
-\end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%				
-\end{parts}

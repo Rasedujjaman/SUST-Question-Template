@@ -1,77 +1,98 @@
-%%%%%%%%%%%%%%%PART-A(Question#03--
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%  Question#03  %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{comment}
+  Put all the topics for this question.
+\end{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \question 
 \begin{parts}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%		
-\part[4]\color{red} If you want to place two figures side by side then use minipage environment. As for example: \color{black}For the circuit shown in Fig.~\ref{fig:ckt-thevenin-dc}, calculate the current in the $10~\unit{\ohm}$ resistance. Use Thevenin's theorem only.
-		
-			
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\part[4]\color{red} If you want to place two figures side by side then use minipage environment. As for example: \color{black} Using nodal analysis, determine the potential across the \SI{4}{\Omega} resistor in Fig.~\ref{fig:ckt-nodal-analysis}
+	
 
+\begin{minipage}[t]{0.48\textwidth}
 \begin{figure}[H]
 \centering
-% First figure
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[scale=0.7]
-
-% Circuit elements
-\draw (3, 4) to[american resistor, l={$8~\Omega$}] (6, 4);
-\draw (3, 4) to[american resistor, l={$2~\Omega$}] (3, 0);
-\draw (9, 4) to[american resistor, l_={$10~\Omega$}] (9, 0);
-\draw (1, 4) to[american resistor, l_={$5~\Omega$}] (1, 2);
-\draw (1, 2) to[battery1, l_={$20~V$}] (1, 0);
-\draw (6, 4) to[battery, l_={$12~V$}] (9, 4);
-\draw (1, 0) -- (9, 0);
-\draw (1, 4) -- (3, 4);
-\draw node[ocirc] (N1) at (9, 4) {} node[anchor=south] at (N1.north){$A$};
-\draw node[ocirc] at (9, 0) {};
-\draw node[ocirc] (N2) at (9, 0) {} node[anchor=north] at (N2.south){$B$};
-
+\scalebox{0.7}{
+\begin{tikzpicture}
+	% Paths, nodes and wires:
+	\draw (4, 4) to[american resistor, l_={$2~\Omega$}, label distance=0.02cm] (7, 4);
+	\draw (7, 4) to[american resistor, l_={$2~\Omega$}, label distance=0.02cm] (10, 4);
+	\draw (10, 4) to[american resistor, l={$4~\Omega$}, label distance=0.02cm] (10, 1);
+	\draw (4, 4) to[american resistor, l={$2~\Omega$}, label distance=0.02cm] (4, 1);
+	
+	
+	
+	\draw (4, 4) to[american resistor, l={$5~\Omega$}, label distance=0.02cm] (7, 6);
+	\draw (7, 6) to[american resistor, l={$5~\Omega$}, label distance=0.02cm] (10, 4);
+	\draw (7, 1) to[american current source, l_={$3~A$}, label distance=0.02cm] (7, 4);
+	\draw (4, 1) -- (10, 1);
+	\draw node[ground] at (7, 1) {};
+	\draw node[ground] at (7, 1) {};
+	\draw node[ground] at (7, 1) {};
+	\draw node[ground] at (7, 1) {};
 \end{tikzpicture}
-\caption{Circuit for Thevenin's Theorem}
-\label{fig:ckt-thevenin-dc}
-\end{minipage}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\hfill
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Second figure
-\begin{minipage}[t]{0.48\textwidth}
-\centering
-\begin{tikzpicture}[scale=0.7]
+}
 
-\draw (4, 5) to[american resistor, l_={$3~\Omega$}] (4, 3);
-\draw (4, 3) to[american resistor, l_={$5~\Omega$}] (4, 1);
-\draw (4, 3) to[american resistor, l={$1~\Omega$}] (6, 3);
-\draw (9, 3) to[american resistor, l={$4~\Omega$}] (9, 1);
-\draw (4, 5) to[american resistor, l={$2~\Omega$}] (9, 5);
-\draw (2, 1) to[american current source, l={$4~A$}] (2, 5);
-\draw (6, 3) to[american controlled voltage source, l={$5i_o$}] (9, 3);
-\draw (4, 1) to[american voltage source, l_={$20~V$}] (9, 1);
-\draw (2, 5) -- (4, 5);
-\draw (2, 1) -- (4, 1);
-\draw (9, 5) -| (9, 3);
-
-% Current label i_o
-\node at (4.7, 2) {$i_o$};
-\draw[->] (4.5, 2.5) -- (4.5, 1.5);
-
-\end{tikzpicture}
-\caption{Circuit for Superposition Theorem}
-\label{fig:ckt-superposition-dc}
-\end{minipage}
+\caption{}
+\label{fig:ckt-nodal-analysis}
 \end{figure}
+\vspace{0.5em}
+
+
+
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\begin{figure}[H]
+\centering
+\scalebox{0.7}{
+\begin{tikzpicture}
+	% Paths, nodes, and wires:
+	\draw (5, 7) to[american resistor, l={$2~\Omega$}, label distance=0.02cm] (5, 4);
+	\draw (5, 4) to[american resistor, l={$4~\Omega$}, label distance=0.02cm] (5, 1);
+	\draw (8, 7) to[american resistor, l={$8~\Omega$}, label distance=0.02cm] (8, 4);
+	\draw (8, 4) to[american controlled voltage source, l={$2~v_o$}, label distance=0.02cm] (8, 1);
+	\draw (5, 4) to[american current source, l={$3~A$}, label distance=0.02cm] (8, 4);
+	\draw (3, 7) to[american voltage source, l_={$12~V$}, label distance=0.02cm] (3, 1);
+	\draw (3, 1) -- (8, 1);
+	\draw (3, 7) -- (8, 7);
+
+
+    \node at (4.5, 5.5) [align=center] {\textbf{+} \\[0.25cm] $v_o$ \\[0.25cm] \textbf{-}}; % Increased spacing above and below V_2
+
+
+	% Loop current labels:
+	\node at (4.0, 4.1) {$i_1$}; % Left loop
+	\node at (6.7, 5.6) {$i_2$}; % Middle loop
+	\node at (6.7, 2.6) {$i_3$}; % Right loop
+
+	% Loop current direction arrows:
+	\draw[->] (3.8, 4.5) arc[start angle=120, end angle=-150, radius=0.5]; % i1 loop arrow
+	\draw[->] (6.5, 6) arc[start angle=120, end angle=-150, radius=0.5]; % i2 loop arrow
+	\draw[->] (6.5, 3) arc[start angle=120, end angle=-150, radius=0.5]; % i3 loop arrow
+\end{tikzpicture}
+}
+
+\caption{}
+\label{fig:ckt-mesh-analysis}
+\end{figure}
+
+\vspace{0.5em}
+\end{minipage}
+
 
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
-\part[4]What is super position theorem? Find $i_o$ in the circuit in Fig.~\ref{fig:ckt-superposition-dc} using the superposition theorem. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%	
+\part[4] Use mess analysis to find currents and voltage $v_o$ in the circuit of Fig.~\ref{fig:ckt-mesh-analysis}.
 		
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part[2] \color{red}If a table is needed to insert, then you can use either tabular or tabulrx. In the table as shown in Table~\ref{table:someItems}, the data are given for a general purpose Silicon diode, draw the I-V characteristic curve. 
 
 \color{black}
@@ -110,10 +131,12 @@
 \end{tabularx}
 \end{table}
 
+
+
 \begin{solution}
 
 \end{solution}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{parts}
 
 
