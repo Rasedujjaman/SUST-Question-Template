@@ -55,6 +55,23 @@
 	breakatwhitespace=false,
 }
 
+
+
+%%%%% To work on chemisty formula and structure 
+% Using chemfig to draw molecules (structural formulae)
+\RequirePackage{chemfig} 
+
+%Using mhchem to typeset chemical formulae and equations
+%Load mhchem using some package options
+\RequirePackage[version=4,arrows=pgf-filled,
+textfontname=sffamily,
+mathfontname=mathsf]{mhchem}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 \renewcommand{\thesubfigure}{\roman{subfigure}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
