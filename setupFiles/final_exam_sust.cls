@@ -15,6 +15,7 @@
 \RequirePackage{fancyvrb}
 \RequirePackage{changepage}
 
+
 \RequirePackage{circuitikz} %% To draw electric circuit diagram
 \RequirePackage{multirow}
 \RequirePackage{pgfplots}
@@ -34,7 +35,7 @@
 \RequirePackage{listings} %For code in appendix
 \RequirePackage{xfrac}
 \RequirePackage{physics}
-	
+
 \RequirePackage[euler]{textgreek}
 \RequirePackage{pgfplots}
 \RequirePackage{xstring}
