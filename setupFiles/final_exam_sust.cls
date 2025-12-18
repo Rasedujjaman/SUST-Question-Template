@@ -35,7 +35,7 @@
 \RequirePackage{listings} %For code in appendix
 \RequirePackage{xfrac}
 \RequirePackage{physics}
-
+\RequirePackage{lastpage}
 \RequirePackage[euler]{textgreek}
 \RequirePackage{pgfplots}
 \RequirePackage{xstring}
